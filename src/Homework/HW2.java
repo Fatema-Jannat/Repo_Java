@@ -60,10 +60,6 @@ public class HW2 {
  *  * Calculate the length of your name, without using length() method of String class.
  */
         //String firstName = "Fatema";
-        int count = 0;
-        for (char c : firstName.toCharArray()) {
-            count++;
-        }
-        System.out.println("1. The length of my First name, without using length() method of String class.: " + count);
+        System.out.println("1. The length of my First name, without using length() method of String class.: " + firstName.split("").length);
     }
 }
