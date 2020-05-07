@@ -80,8 +80,10 @@ public class HW3 {
             case 'D':
                 if(driveType.equalsIgnoreCase("Snow")){
                     System.out.println("You are on Snow mode");
+                    
                 }else if(driveType.equalsIgnoreCase("Sport")){
                     System.out.println("You are on Sport mode");
+
                 }else if(driveType.equalsIgnoreCase("Eco")){
                     System.out.println("You are on Eco mode");
                 }
