@@ -70,7 +70,7 @@ public class HW3 {
  * if car mode is N you can "put car in car wash"
  * if car mode is R you can "revere the car"
  */
-        char carMode = 'P';
+        char carMode = 'D';
         String driveType ="";
 
         switch (carMode) {
@@ -86,6 +86,8 @@ public class HW3 {
 
                 }else if(driveType.equalsIgnoreCase("Eco")){
                     System.out.println("You are on Eco mode");
+                }else{
+                    System.out.println("Invalid drive type: "+driveType);
                 }
                 break;
             case 'N':
