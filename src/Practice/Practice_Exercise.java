@@ -222,6 +222,19 @@ public class Practice_Exercise {
         }else{
             System.out.println("Invalid Fan's name: "+ name);
         }
+        String word = "Level";
+        int length = word.length();
+        String rev = "";
+
+        for(int h= length -1; h >= 0; h--)
+            rev = rev + word.charAt(h);
+        if(word.equalsIgnoreCase(rev))
+            System.out.println(word + " is a palindrome.");
+        else
+            System.out.println(word + " is NOT a palindrome.");
+
+
+
 
     }
 }

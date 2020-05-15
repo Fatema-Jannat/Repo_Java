@@ -28,30 +28,29 @@ public class HW4 {
 
     public static void main(String[] args) {
         String messageAbr = "Outfit of the day";
+        String abr="";
         String [] splitMessage = messageAbr.split(" ");
 
-        for(int i=0; i < splitMessage.length;i++){
-            String abr = splitMessage[i].substring(0,1).toUpperCase();
-
-            System.out.println("Abbreviation: "+abr);
+        for(String word : splitMessage){
+             abr = abr + word.toUpperCase().charAt(0);
         }
-
+        System.out.println("Abbreviation: "+ abr + ", " + messageAbr);
 
 /** String line = "once upOn a tiMe in the UNIVERSE"; //Once Upon A Time In The Universe
     System.out.println("Line (Before modification) : "+line);
     //code
     System.out.println("Line (After modification) : "+line);
     */
-    String line = "once upOn a tiMe in the UNIVERSE";
-    String[] splitLine = line.split(" ");
+        String line = "once upOn a tiMe in the UNIVERSE";
+        String[] splitLine = line.split(" ");
 
-    System.out.println("Line (Before modification) : "+line);
+        System.out.println("Line (Before modification): "+line);
 
-    for(int i=0; i < splitLine.length;i++) {
-        String lineAfter = splitLine[i].substring(0, 1).toUpperCase() + splitLine[i].substring(1).toLowerCase();
-
-        System.out.println("Line (After modification) : " + lineAfter);
-    }
+        String lineAfter="";
+        for(String sentence:splitLine) {
+            lineAfter = lineAfter +" "+ sentence.substring(0,1).toUpperCase() + sentence.substring(1).toLowerCase();
+        }
+            System.out.println("Line (After modification): " + lineAfter);
 /**
  * reverse a string
     String message = "happy holidays"; //syadiloh yppah
@@ -63,7 +62,7 @@ public class HW4 {
         String message = "happy holidays";
         String reverseMessage = "";
 
-        System.out.println("Message : "+ message);
+        System.out.println("Message: "+ message);
         for(int i = message.length()-1; i>=0; i--){
             reverseMessage = reverseMessage + message.charAt(i);
         }
@@ -78,16 +77,16 @@ public class HW4 {
      * System.out.println("is "+word +" a palindrome: "+result);
      *
      * */
-        String word = "mom";
+        String word = "Level";
         int length = word.length();
         String rev = "";
 
         for(int i= length -1; i >= 0; i--)
             rev = rev + word.charAt(i);
-        if(word.equals(rev))
-            System.out.println(word + " is a palindrome.");
+        if(word.equalsIgnoreCase(rev))
+            System.out.println("The word '" + word + "' is a palindrome.");
             else
-            System.out.println(word + " is NOT a palindrome.");
+            System.out.println("The word '" + word + "' is NOT a palindrome.");
 
         }
     }
